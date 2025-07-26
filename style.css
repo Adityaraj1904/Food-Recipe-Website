@@ -1,0 +1,187 @@
+body {
+    font-family: poppins, sans-serif;
+    box-sizing: border-box;
+    background: rgba(211, 211, 211, 0.4);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* Nav Bar */
+
+nav {
+    height: 200px;
+}
+
+.logo {
+    float: left;
+    width: 150px;
+    cursor: pointer;
+}
+
+.menu {
+    line-height: 4;
+}
+
+.menu-list {
+    list-style: none;
+    float: right;
+}
+
+.menu-item {
+    float: left;
+    padding: 20px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    color: #F06C4E;
+    transition: color 0.2s;
+}
+
+.menu-item-home a {
+    text-decoration: none;
+    color: coral;
+}
+
+/* Search bar */
+
+#search-bar-container {
+    width: 70%;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background: #F8F7F5;
+    border-radius: 10px;
+    padding: 0 0 0 20px;
+    overflow: hidden;
+}
+
+.search-icon {
+    color: #9C9C9B;
+    font-size: 16px;
+    width: 10%;
+    display: inline-block;
+    background-color: #F8F7F5;
+    border-radius: 10px 0 0 10px;
+}
+
+#input-box {
+    width: 70%;
+    border: none;
+    background: none;
+    background-color: #F8F7F5;
+    font-size: 16px;
+}
+
+input:focus,
+button:focus {
+    outline: none;
+}
+
+#search-button {
+    background: #F06C4E;
+    width: 20%;
+    border: none;
+    color: #fff;
+    padding: 15px;
+    font-size: 16px;
+}
+
+#search-button:hover {
+    background-color: rebeccapurple;
+    transition: background-color 0.2s ease;
+}
+
+/* Content body */
+
+.single-item {
+    border: 2px solid #4d0d4f4b;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.modal-content {
+    padding: 10px 20px;
+}
+
+.ingredient-list {
+    list-style: none;
+}
+
+.food-icons {
+    padding-right: 20px;
+    color: gray;
+    transition: padding-right 0.3s ease;
+}
+
+.food-icons:hover {
+    padding-right: 30px;
+    color: coral; 
+}
+
+.single-item-name {
+    color: coral;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px dotted lightgray;
+}
+
+#error-message {
+    display: none;
+    font-size: 20px;
+    border: 2px solid #4d0d4f4b;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/*Media query starts*/
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 90%;
+    }
+
+    nav {
+        display: grid;
+        justify-content: center;
+    }
+
+    .logo {
+        margin: auto;
+    }
+
+    .menu {
+        margin-top: 30px;
+        line-height: 0;
+    }
+
+    .menu-list {
+        padding: 0px;
+    }
+
+    #search-bar-container {
+        width: 90%;
+        margin-top: 30px;
+    }
+
+    #search-button {
+        width: 30%;
+    }
+
+    .modal-dialog {
+        padding: 20px 20px;    
+    }
+
+    .modal-body{
+        margin: auto;
+    }
+
+}
