@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YumSearch | Blog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #f7f7f7;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #ff5722;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    .blog-container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .blog-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      overflow: hidden;
+      flex: 1 1 300px;
+      transition: transform 0.3s;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .blog-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .blog-content {
+      padding: 20px;
+    }
+
+    .blog-title {
+      font-size: 1.25rem;
+      color: #ff5722;
+      margin-bottom: 10px;
+    }
+
+    .blog-desc {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    @media (max-width: 768px) {
+      .blog-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .go-back-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 28px;
+  color: white;
+  background-color: crimson;
+  border: none;
+  border-radius: 50%;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  z-index: 9999;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.go-back-btn:hover {
+  background-color: darkred;
+  transform: rotate(90deg);
+}
+
+/* Responsive for mobile */
+@media (max-width: 600px) {
+  .go-back-btn {
+    font-size: 24px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    top: 15px;
+    right: 15px;
+  }
+}
+@media (max-width: 600px) {
+  .blog-container {
+    padding: 0 10px;
+  }
+
+  .blog-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .blog-img {
+    height: auto;
+  }
+
+  .blog-title {
+    font-size: 1.1rem;
+  }
+
+  .blog-desc {
+    font-size: 1rem;
+    display: block;
+    color: #444;
+    line-height: 1.5;
+  }
+}
+
+  </style>
+</head>
+<body>
+<a href="index.html" class="go-back-btn" title="Back to top">×</a>
+  <header>
+    <h1>YumSearch Blog</h1>
+    <p>Discover cooking tips, food stories & more</p>
+  </header>
+
+  <div class="blog-container">
+
+    <div class="blog-card">
+      <img src="spices.png" alt="Spices" class="blog-img">
+      <div class="blog-content">
+        <h3 class="blog-title">5 Essential Spices in Every Indian Kitchen</h3>
+        <p class="blog-desc">Learn about the must-have spices that add bold flavors to your favorite dishes, from turmeric to garam masala.</p>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <img src="meals.png" alt="Cooking" class="blog-img">
+      <div class="blog-content">
+        <h3 class="blog-title">10-Minute Meals for Busy Weeknights</h3>
+        <p class="blog-desc">Short on time? Check out these quick and tasty recipes that don't compromise on flavor or nutrition.</p>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <img src="desserts.png" alt="Dessert" class="blog-img">
+      <div class="blog-content">
+        <h3 class="blog-title">Top 5 Classic Desserts to Master</h3>
+        <p class="blog-desc">From gooey brownies to classic gulab jamun, these timeless desserts are a must-try for every home cook.</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
