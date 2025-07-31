@@ -13,6 +13,6 @@ A fully responsive food recipe website that allows users to search for and view 
 
 ## 🖼 Demo
 
-<img width="1919" height="860" alt="Screenshot 2025-07-26 223850" src="https://github.com/user-attachments/assets/feaf0c5a-b3bf-45bc-85b5-c587f0c936c2" />
+<img width="1920" height="1267" alt="screencapture-127-0-0-1-3000-Food-Recipe-Website-index-html-2025-07-31-21_13_08" src="https://github.com/user-attachments/assets/0e422922-6467-470d-808b-daac41887c82" />
 
 <img width="1920" height="3591" alt="screencapture-127-0-0-1-3000-index-html-2025-07-26-22_42_20" src="https://github.com/user-attachments/assets/5aaf31c3-a0ca-4d59-a51a-6d9df2c2840a" />
