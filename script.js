@@ -110,3 +110,55 @@ const singleItemInfo = food => {
 logoimage.addEventListener('click', function () {
     location.reload();
 })
+
+// -----------------------------------
+
+// Fetch and display 6 random meals for Top Recommended Foods
+function loadTopRecommendedFoods() {
+    const topSection = document.getElementById('top-recipes');
+    const topHeading = document.getElementById('top-heading');
+
+    // Clear old content if any
+    topSection.innerHTML = '';
+
+    for (let i = 0; i < 6; i++) {
+        fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+            .then(res => res.json())
+            .then(data => {
+                const food = data.meals[0];
+
+                const foodCard = document.createElement('div');
+                foodCard.className = 'col';
+
+                foodCard.innerHTML = `
+                    <div onclick="displayDetails('${food.idMeal}')" class="card h-100 shadow-sm text-center" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <img src="${food.strMealThumb}" class="card-img-top img-fluid" alt="${food.strMeal}">
+                        <div class="card-body">
+                            <h5 class="card-title">${food.strMeal}</h5>
+                            
+                        </div>
+                    </div>
+                `;
+                topSection.appendChild(foodCard);
+            });
+    }
+}
+
+// Call it on page load
+loadTopRecommendedFoods();
+
+
+document.getElementById('search-button').addEventListener('click', function () {
+    const query = document.getElementById('input-box').value.trim();
+    const topSection = document.getElementById('top-recipes');
+    const topHeading = document.getElementById('top-heading');
+
+    if (query !== '') {
+        topSection.style.display = 'none';
+        topHeading.style.display = 'none';
+    } else {
+        topSection.style.display = 'flex';
+        topHeading.style.display = 'block';
+    }
+});
+
